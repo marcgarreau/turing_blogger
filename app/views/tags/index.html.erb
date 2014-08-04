@@ -1,0 +1,7 @@
+<h1>All Tags</h1>
+<p>
+<% @tags.map do |tag| %>
+	<%= link_to tag.name, tag_path(tag) %>
+	<%= link_to "Delete", tag_path(tag), method: :delete, data: {confirm: "Really delete?"} %><br/>
+<% end %>
+</p>
